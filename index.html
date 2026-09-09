@@ -1,208 +1,533 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>DelMech Engineering Solutions Pvt. Ltd.</title>
+    <title>DelMech Engineering Solutions Pvt. Ltd.</title>
 
-<style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        background: linear-gradient(135deg, #eef7ff, #ffffff);
-        min-height: 100vh;
-        color: #082f55;
-    }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at top left, #dff2ff 0%, transparent 35%),
+                radial-gradient(circle at bottom right, #e7f7ef 0%, transparent 35%),
+                #f7fafc;
+            color: #082f55;
+        }
 
-    .container {
-        max-width: 520px;
-        margin: auto;
-        padding: 35px 20px;
-        text-align: center;
-    }
+        .page {
+            width: 100%;
+            max-width: 520px;
+            margin: auto;
+            padding: 30px 18px 35px;
+        }
 
-    .logo {
-        width: 110px;
-        height: 110px;
-        margin: 0 auto 18px;
-        border-radius: 50%;
-        background: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-        font-size: 42px;
-        font-weight: bold;
-        color: #0b4f8a;
-    }
+        /* Header */
 
-    h1 {
-        font-size: 25px;
-        line-height: 1.25;
-        margin-bottom: 8px;
-    }
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
 
-    .company {
-        font-size: 15px;
-        font-weight: 600;
-        color: #50708c;
-        margin-bottom: 8px;
-    }
+        .logo {
+            width: 105px;
+            height: 105px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 61, 110, 0.14);
+            border: 2px solid #e5eef6;
+        }
 
-    .location {
-        font-size: 13px;
-        color: #71879a;
-        margin-bottom: 28px;
-    }
+        .logo-letter {
+            font-size: 54px;
+            font-weight: 800;
+            color: #0a4d80;
+        }
 
-    .connect {
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 18px;
-    }
+        .brand-name {
+            font-size: 31px;
+            font-weight: 800;
+            letter-spacing: 0.3px;
+            color: #06365f;
+        }
 
-    .button {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        width: 100%;
-        padding: 17px 20px;
-        margin: 14px 0;
-        border-radius: 15px;
-        text-decoration: none;
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
-        box-shadow: 0 7px 18px rgba(0,0,0,0.12);
-        transition: transform 0.2s;
-    }
+        .company-name {
+            margin-top: 6px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #476982;
+        }
 
-    .button:hover {
-        transform: translateY(-2px);
-    }
+        .location-text {
+            margin-top: 8px;
+            font-size: 13px;
+            color: #71879a;
+        }
 
-    .icon {
-        width: 42px;
-        height: 42px;
-        background: rgba(255,255,255,0.2);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 23px;
-    }
+        .tagline {
+            margin-top: 17px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #0b6595;
+            line-height: 1.5;
+        }
 
-    .text {
-        text-align: left;
-    }
+        /* Connect box */
 
-    .small {
-        display: block;
-        font-size: 12px;
-        font-weight: normal;
-        margin-top: 3px;
-        opacity: 0.9;
-    }
+        .connect-box {
+            text-align: center;
+            margin: 25px 0 16px;
+        }
 
-    .whatsapp {
-        background: #25D366;
-    }
+        .connect-title {
+            font-size: 21px;
+            font-weight: 800;
+            color: #082f55;
+        }
 
-    .facebook {
-        background: #1877F2;
-    }
+        .connect-subtitle {
+            margin-top: 5px;
+            font-size: 13px;
+            color: #71879a;
+        }
 
-    .website {
-        background: #0b5fa5;
-    }
+        /* Buttons */
 
-    .linkedin {
-        background: #0A66C2;
-    }
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+        }
 
-    footer {
-        margin-top: 32px;
-        font-size: 12px;
-        color: #7890a5;
-        line-height: 1.5;
-    }
-</style>
+        .social-button {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            min-height: 68px;
+            padding: 10px 18px;
+            border-radius: 16px;
+            text-decoration: none;
+            color: #ffffff;
+            box-shadow: 0 8px 20px rgba(0, 40, 80, 0.13);
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+        }
+
+        .social-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(0, 40, 80, 0.18);
+        }
+
+        .social-button:active {
+            transform: scale(0.98);
+        }
+
+        .icon {
+            width: 46px;
+            height: 46px;
+            min-width: 46px;
+            border-radius: 13px;
+            background: rgba(255, 255, 255, 0.18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: 800;
+            font-size: 22px;
+        }
+
+        .button-text {
+            text-align: left;
+        }
+
+        .button-title {
+            display: block;
+            font-size: 17px;
+            font-weight: 800;
+        }
+
+        .button-description {
+            display: block;
+            margin-top: 3px;
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .arrow {
+            margin-left: auto;
+            font-size: 22px;
+            opacity: 0.8;
+        }
+
+        /* Individual colours */
+
+        .whatsapp {
+            background: linear-gradient(135deg, #20c863, #128c4a);
+        }
+
+        .facebook {
+            background: linear-gradient(135deg, #1877f2, #0d5dcc);
+        }
+
+        .instagram {
+            background: linear-gradient(
+                135deg,
+                #833ab4,
+                #c13584,
+                #e1306c,
+                #f77737
+            );
+        }
+
+        .website {
+            background: linear-gradient(135deg, #0b679f, #064b79);
+        }
+
+        .linkedin {
+            background: linear-gradient(135deg, #0a66c2, #084b8f);
+        }
+
+        .maps {
+            background: linear-gradient(135deg, #168447, #0c6334);
+        }
+
+        /* Footer */
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #dce7ef;
+        }
+
+        .footer-company {
+            font-size: 13px;
+            font-weight: 700;
+            color: #4e6b82;
+        }
+
+        .footer-products {
+            margin-top: 6px;
+            font-size: 11px;
+            line-height: 1.5;
+            color: #8193a2;
+        }
+
+        .footer-copy {
+            margin-top: 12px;
+            font-size: 10px;
+            color: #9aa9b5;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 380px) {
+
+            .page {
+                padding: 25px 14px 30px;
+            }
+
+            .brand-name {
+                font-size: 28px;
+            }
+
+            .company-name {
+                font-size: 12px;
+            }
+
+            .social-button {
+                min-height: 64px;
+                padding: 9px 14px;
+            }
+
+            .icon {
+                width: 43px;
+                height: 43px;
+                min-width: 43px;
+                margin-right: 12px;
+            }
+
+            .button-title {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="page">
 
-    <div class="logo">D</div>
+    <!-- HEADER -->
 
-    <h1>DelMech</h1>
+    <div class="header">
 
-    <div class="company">
-        ENGINEERING SOLUTIONS PVT. LTD.
+        <div class="logo">
+            <div class="logo-letter">D</div>
+        </div>
+
+        <div class="brand-name">
+            DelMech
+        </div>
+
+        <div class="company-name">
+            ENGINEERING SOLUTIONS PVT. LTD.
+        </div>
+
+        <div class="location-text">
+            Dharwad | Karnataka | India
+        </div>
+
+        <div class="tagline">
+            HDPE Pipes • Fittings • Water Infrastructure Solutions
+        </div>
+
     </div>
 
-    <div class="location">
-        Dharwad | Karnataka | India
+
+    <!-- CONNECT -->
+
+    <div class="connect-box">
+
+        <div class="connect-title">
+            Connect With Us
+        </div>
+
+        <div class="connect-subtitle">
+            Follow, contact or visit DelMech
+        </div>
+
     </div>
 
-    <div class="connect">
-        Connect With Us
+
+    <!-- SOCIAL LINKS -->
+
+    <div class="links">
+
+
+        <!-- WHATSAPP -->
+
+        <a
+            class="social-button whatsapp"
+            href="https://wa.me/917259197766"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <div class="icon">
+                ☎
+            </div>
+
+            <div class="button-text">
+
+                <span class="button-title">
+                    WhatsApp
+                </span>
+
+                <span class="button-description">
+                    Chat with DelMech
+                </span>
+
+            </div>
+
+            <div class="arrow">
+                ›
+            </div>
+
+        </a>
+
+
+        <!-- FACEBOOK -->
+
+        <a
+            class="social-button facebook"
+            href="https://www.facebook.com/people/DelMech-Engineering-Solutions-Pvt-Ltd/100063910158639/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <div class="icon">
+                f
+            </div>
+
+            <div class="button-text">
+
+                <span class="button-title">
+                    Facebook
+                </span>
+
+                <span class="button-description">
+                    Follow our Facebook page
+                </span>
+
+            </div>
+
+            <div class="arrow">
+                ›
+            </div>
+
+        </a>
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+            class="social-button instagram"
+            href="https://www.instagram.com/delmech_dharwad/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <div class="icon">
+                ◎
+            </div>
+
+            <div class="button-text">
+
+                <span class="button-title">
+                    Instagram
+                </span>
+
+                <span class="button-description">
+                    Follow @delmech_dharwad
+                </span>
+
+            </div>
+
+            <div class="arrow">
+                ›
+            </div>
+
+        </a>
+
+
+        <!-- WEBSITE -->
+
+        <a
+            class="social-button website"
+            href="https://www.delmech.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <div class="icon">
+                🌐
+            </div>
+
+            <div class="button-text">
+
+                <span class="button-title">
+                    Website
+                </span>
+
+                <span class="button-description">
+                    Visit www.delmech.in
+                </span>
+
+            </div>
+
+            <div class="arrow">
+                ›
+            </div>
+
+        </a>
+
+
+        <!-- LINKEDIN -->
+
+        <a
+            class="social-button linkedin"
+            href="https://www.linkedin.com/company/delmech-engineering-solutions-pvt-ltd/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <div class="icon">
+                in
+            </div>
+
+            <div class="button-text">
+
+                <span class="button-title">
+                    LinkedIn
+                </span>
+
+                <span class="button-description">
+                    Connect with our company
+                </span>
+
+            </div>
+
+            <div class="arrow">
+                ›
+            </div>
+
+        </a>
+
+
+        <!-- LOCATION -->
+
+        <a
+            class="social-button maps"
+            href="https://maps.app.goo.gl/eG6xEs3Js7vPo35EA"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <div class="icon">
+                📍
+            </div>
+
+            <div class="button-text">
+
+                <span class="button-title">
+                    Our Location
+                </span>
+
+                <span class="button-description">
+                    Find DelMech on Google Maps
+                </span>
+
+            </div>
+
+            <div class="arrow">
+                ›
+            </div>
+
+        </a>
+
     </div>
 
-    <!-- WhatsApp -->
-    <a class="button whatsapp"
-       href="https://wa.me/917259197766"
-       target="_blank">
-        <div class="icon">☏</div>
-        <div class="text">
-            WhatsApp
-            <span class="small">Chat With Us</span>
-        </div>
-    </a>
 
-    <!-- Facebook -->
-    <a class="button facebook"
-       href="https://www.facebook.com/people/DelMech-Engineering-Solutions-Pvt-Ltd/100063910158639/"
-       target="_blank">
-        <div class="icon">f</div>
-        <div class="text">
-            Facebook
-            <span class="small">Follow Our Page</span>
-        </div>
-    </a>
+    <!-- FOOTER -->
 
-    <!-- Website -->
-    <a class="button website"
-       href="https://www.delmech.in/"
-       target="_blank">
-        <div class="icon">🌐</div>
-        <div class="text">
-            Website
-            <span class="small">Visit Our Website</span>
-        </div>
-    </a>
+    <div class="footer">
 
-    <!-- LinkedIn -->
-    <a class="button linkedin"
-       href="https://www.linkedin.com/company/delmech-engineering-solutions-pvt-ltd/"
-       target="_blank">
-        <div class="icon">in</div>
-        <div class="text">
-            LinkedIn
-            <span class="small">Connect With Us</span>
+        <div class="footer-company">
+            DelMech Engineering Solutions Pvt. Ltd.
         </div>
-    </a>
 
-    <footer>
-        © DelMech Engineering Solutions Pvt. Ltd.<br>
-        HDPE Pipes | Fittings | Water Infrastructure Solutions
-    </footer>
+        <div class="footer-products">
+            HDPE Pipes | Fittings | Water Infrastructure Solutions
+        </div>
+
+        <div class="footer-copy">
+            © 2026 DelMech Engineering Solutions Pvt. Ltd.
+        </div>
+
+    </div>
 
 </div>
 
